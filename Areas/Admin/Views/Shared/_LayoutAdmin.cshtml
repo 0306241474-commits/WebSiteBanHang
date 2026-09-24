@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Admin Dashboard</title>
+
+    <!-- Đường dẫn CSS cho Admin -->
+    <link rel="stylesheet" href="~/admin/css/admin-style.css" asp-append-version="true" />
+    @RenderSection("Styles", required: false)
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Admin Header / Navbar -->
+        <nav class="main-header navbar navbar-expand">
+            <!-- Header content -->
+        </nav>
+
+        <!-- Admin Sidebar Navigation -->
+        <aside class="main-sidebar">
+            <!-- Sidebar content -->
+        </aside>
+
+        <!-- Nội dung chính của trang Admin -->
+        <div class="content-wrapper">
+            @RenderBody()
+        </div>
+
+        <!-- Admin Footer -->
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2026 Admin Panel</strong>
+        </footer>
+    </div>
+
+    <!-- Scripts Admin -->
+    <script src="~/admin/js/admin-main.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
