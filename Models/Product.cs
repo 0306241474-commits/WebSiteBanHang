@@ -27,7 +27,7 @@ namespace WebBanHang.Models
         [Required(ErrorMessage = "Vui lòng chọn danh mục")]
         [Display(Name = "Danh mục")]
         public int CategoryId { get; set; }
-
+        public bool IsActive { get; set; } = true;
         [ForeignKey("CategoryId")]
         public Category? Category { get; set; }
     }

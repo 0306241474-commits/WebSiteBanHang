@@ -12,6 +12,17 @@ namespace WebBanHang.Models
         [Display(Name = "Tên danh mục")]
         public string Name { get; set; } = string.Empty;
 
+        // --- Bổ sung các thuộc tính còn thiếu ---
+        [Display(Name = "Thứ tự hiển thị")]
+        public int DisplayOrder { get; set; } = 0;
+
+        [Display(Name = "Mô tả")]
+        public string? Description { get; set; }
+
+        [Display(Name = "Trạng thái")]
+        public bool IsActive { get; set; } = true;
+        // ----------------------------------------
+
         public ICollection<Product>? Products { get; set; }
     }
 }

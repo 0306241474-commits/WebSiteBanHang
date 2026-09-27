@@ -6,7 +6,39 @@ namespace WebBanHang.Controllers;
 
 public class HomeController : Controller
 {
+    [HttpGet("/")]
+    [HttpGet("/index.html")]
+    [HttpGet("/Home/Index")]
     public IActionResult Index()
+    {
+        return View();
+    }
+
+    [HttpGet("/shop.html")]
+    [HttpGet("/Home/Shop")]
+    public IActionResult Shop()
+    {
+        return View();
+    }
+
+    [HttpGet("/product-details.html")]
+    [HttpGet("/Home/Details")]
+    public IActionResult Details()
+    {
+        return View();
+    }
+
+    [HttpGet("/cart.html")]
+    [HttpGet("/Home/Cart")]
+    public IActionResult Cart()
+    {
+        return View();
+    }
+
+    [HttpGet("/checkout.html")]
+    [HttpGet("/checkout-1.html")]
+    [HttpGet("/Home/Checkout")]
+    public IActionResult Checkout()
     {
         return View();
     }
