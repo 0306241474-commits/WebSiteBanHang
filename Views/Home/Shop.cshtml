@@ -1,3 +1,5 @@
+@model WebBanHang.Models.ShopViewModel
+
 @{
     ViewData["Title"] = "Karl - Fashion Ecommerce Template | Shop";
 }
@@ -36,7 +38,7 @@
                                 <div class="row">
                                     <div class="col-12 col-lg-5">
                                         <div class="quickview_pro_img">
-                                            <img src="img/product-img/product-1.jpg" alt="">
+                                            <img src="@Url.Content("~/img/product-img/product-1.jpg")" alt="">
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-7">
@@ -101,63 +103,20 @@
                             <div class="widget catagory mb-50">
                                 <!--  Side Nav  -->
                                 <div class="nav-side-menu">
-                                    <h6 class="mb-0">Catagories</h6>
+                                    <h6 class="mb-0">Categories</h6>
                                     <div class="menu-list">
                                         <ul id="menu-content2" class="menu-content collapse out">
-                                            <!-- Single Item -->
-                                            <li data-toggle="collapse" data-target="#women2">
-                                                <a href="#">Woman wear</a>
-                                                <ul class="sub-menu collapse show" id="women2">
-                                                    <li><a href="#">Midi Dresses</a></li>
-                                                    <li><a href="#">Maxi Dresses</a></li>
-                                                    <li><a href="#">Prom Dresses</a></li>
-                                                    <li><a href="#">Little Black Dresses</a></li>
-                                                    <li><a href="#">Mini Dresses</a></li>
-                                                </ul>
+                                            <li>
+                                                <a asp-controller="Home" asp-action="Shop">All products</a>
                                             </li>
-                                            <!-- Single Item -->
-                                            <li data-toggle="collapse" data-target="#man2" class="collapsed">
-                                                <a href="#">Man Wear</a>
-                                                <ul class="sub-menu collapse" id="man2">
-                                                    <li><a href="#">Man Dresses</a></li>
-                                                    <li><a href="#">Man Black Dresses</a></li>
-                                                    <li><a href="#">Man Mini Dresses</a></li>
-                                                </ul>
-                                            </li>
-                                            <!-- Single Item -->
-                                            <li data-toggle="collapse" data-target="#kids2" class="collapsed">
-                                                <a href="#">Children</a>
-                                                <ul class="sub-menu collapse" id="kids2">
-                                                    <li><a href="#">Children Dresses</a></li>
-                                                    <li><a href="#">Mini Dresses</a></li>
-                                                </ul>
-                                            </li>
-                                            <!-- Single Item -->
-                                            <li data-toggle="collapse" data-target="#bags2" class="collapsed">
-                                                <a href="#">Bags &amp; Purses</a>
-                                                <ul class="sub-menu collapse" id="bags2">
-                                                    <li><a href="#">Bags</a></li>
-                                                    <li><a href="#">Purses</a></li>
-                                                </ul>
-                                            </li>
-                                            <!-- Single Item -->
-                                            <li data-toggle="collapse" data-target="#eyewear2" class="collapsed">
-                                                <a href="#">Eyewear</a>
-                                                <ul class="sub-menu collapse" id="eyewear2">
-                                                    <li><a href="#">Eyewear Style 1</a></li>
-                                                    <li><a href="#">Eyewear Style 2</a></li>
-                                                    <li><a href="#">Eyewear Style 3</a></li>
-                                                </ul>
-                                            </li>
-                                            <!-- Single Item -->
-                                            <li data-toggle="collapse" data-target="#footwear2" class="collapsed">
-                                                <a href="#">Footwear</a>
-                                                <ul class="sub-menu collapse" id="footwear2">
-                                                    <li><a href="#">Footwear 1</a></li>
-                                                    <li><a href="#">Footwear 2</a></li>
-                                                    <li><a href="#">Footwear 3</a></li>
-                                                </ul>
-                                            </li>
+                                            @foreach (var category in Model.Categories)
+                                            {
+                                                <li>
+                                                    <a asp-controller="Home" asp-action="Shop" asp-route-categoryId="@category.Id">
+                                                        @category.Name
+                                                    </a>
+                                                </li>
+                                            }
                                         </ul>
                                     </div>
                                 </div>
@@ -212,7 +171,7 @@
                                     <!-- Single Recommended Product -->
                                     <div class="single-recommended-product d-flex mb-30">
                                         <div class="single-recommended-thumb mr-3">
-                                            <img src="img/product-img/product-10.jpg" alt="">
+                                            <img src="@Url.Content("~/img/product-img/product-10.jpg")" alt="">
                                         </div>
                                         <div class="single-recommended-desc">
                                             <h6>Men’s T-shirt</h6>
@@ -222,7 +181,7 @@
                                     <!-- Single Recommended Product -->
                                     <div class="single-recommended-product d-flex mb-30">
                                         <div class="single-recommended-thumb mr-3">
-                                            <img src="img/product-img/product-11.jpg" alt="">
+                                            <img src="@Url.Content("~/img/product-img/product-11.jpg")" alt="">
                                         </div>
                                         <div class="single-recommended-desc">
                                             <h6>Blue mini top</h6>
@@ -232,7 +191,7 @@
                                     <!-- Single Recommended Product -->
                                     <div class="single-recommended-product d-flex">
                                         <div class="single-recommended-thumb mr-3">
-                                            <img src="img/product-img/product-12.jpg" alt="">
+                                            <img src="@Url.Content("~/img/product-img/product-12.jpg")" alt="">
                                         </div>
                                         <div class="single-recommended-desc">
                                             <h6>Women’s T-shirt</h6>
@@ -246,13 +205,53 @@
 
                     <div class="col-12 col-md-8 col-lg-9">
                         <div class="shop_grid_product_area">
+                            <div class="mb-30">
+                                @if (Model.SelectedCategoryId is int selectedCategoryId)
+                                {
+                                    <h3>@(Model.Categories.FirstOrDefault(category => category.Id == selectedCategoryId)?.Name ?? "Products")</h3>
+                                }
+                                else
+                                {
+                                    <h3>All products</h3>
+                                }
+                            </div>
                             <div class="row">
+                                @if (Model.Products.Any())
+                                {
+                                    foreach (var product in Model.Products)
+                                    {
+                                        <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig">
+                                            <div class="product-img">
+                                                <a asp-controller="Home" asp-action="Details" asp-route-id="@product.Id">
+                                                    <img src="@(string.IsNullOrWhiteSpace(product.ImageUrl) ? Url.Content("~/img/product-img/product-1.jpg") : product.ImageUrl)" alt="@product.Name">
+                                                </a>
+                                            </div>
+                                            <div class="product-description">
+                                                <h4 class="product-price">@product.Price.ToString("N0") ₫</h4>
+                                                <p><a asp-controller="Home" asp-action="Details" asp-route-id="@product.Id">@product.Name</a></p>
+                                                <form asp-controller="Cart" asp-action="Add" method="post">
+                                                    <input type="hidden" name="productId" value="@product.Id">
+                                                    <input type="hidden" name="quantity" value="1">
+                                                    <button type="submit" class="add-to-cart-btn btn btn-link p-0">ADD TO CART</button>
+                                                </form>
+                                                <a asp-controller="Home" asp-action="Details" asp-route-id="@product.Id">View details</a>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                                else
+                                {
+                                    <div class="col-12 text-center">
+                                        <p>No products were found for this category.</p>
+                                    </div>
+                                }
 
+                                @*
                                 <!-- Single gallery Item -->
                                 <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.2s">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <img src="img/product-img/product-1.jpg" alt="">
+                                        <img src="@Url.Content("~/img/product-img/product-1.jpg")" alt="">
                                         <div class="product-quicview">
                                             <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
                                         </div>
@@ -270,7 +269,7 @@
                                 <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.3s">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <img src="img/product-img/product-2.jpg" alt="">
+                                        <img src="@Url.Content("~/img/product-img/product-2.jpg")" alt="">
                                         <div class="product-quicview">
                                             <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
                                         </div>
@@ -288,7 +287,7 @@
                                 <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <img src="img/product-img/product-3.jpg" alt="">
+                                        <img src="@Url.Content("~/img/product-img/product-3.jpg")" alt="">
                                         <div class="product-quicview">
                                             <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
                                         </div>
@@ -306,7 +305,7 @@
                                 <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.5s">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <img src="img/product-img/product-4.jpg" alt="">
+                                        <img src="@Url.Content("~/img/product-img/product-4.jpg")" alt="">
                                         <div class="product-quicview">
                                             <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
                                         </div>
@@ -324,7 +323,7 @@
                                 <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.6s">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <img src="img/product-img/product-5.jpg" alt="">
+                                        <img src="@Url.Content("~/img/product-img/product-5.jpg")" alt="">
                                         <div class="product-quicview">
                                             <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
                                         </div>
@@ -342,7 +341,7 @@
                                 <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.7s">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <img src="img/product-img/product-6.jpg" alt="">
+                                        <img src="@Url.Content("~/img/product-img/product-6.jpg")" alt="">
                                         <div class="product-quicview">
                                             <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
                                         </div>
@@ -360,7 +359,7 @@
                                 <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.8s">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <img src="img/product-img/product-7.jpg" alt="">
+                                        <img src="@Url.Content("~/img/product-img/product-7.jpg")" alt="">
                                         <div class="product-quicview">
                                             <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
                                         </div>
@@ -378,7 +377,7 @@
                                 <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.9s">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <img src="img/product-img/product-8.jpg" alt="">
+                                        <img src="@Url.Content("~/img/product-img/product-8.jpg")" alt="">
                                         <div class="product-quicview">
                                             <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
                                         </div>
@@ -396,7 +395,7 @@
                                 <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="1s">
                                     <!-- Product Image -->
                                     <div class="product-img">
-                                        <img src="img/product-img/product-9.jpg" alt="">
+                                        <img src="@Url.Content("~/img/product-img/product-9.jpg")" alt="">
                                         <div class="product-quicview">
                                             <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
                                         </div>
@@ -409,6 +408,7 @@
                                         <a href="#" class="add-to-cart-btn">ADD TO CART</a>
                                     </div>
                                 </div>
+                                *@
                             </div>
                         </div>
 

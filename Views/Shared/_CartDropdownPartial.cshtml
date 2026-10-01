@@ -1,0 +1,27 @@
+@inject WebBanHang.Services.CartService CartService
+@{
+    var cart = await CartService.GetCartAsync(Context.Session);
+}
+
+<div class="cart">
+    <a asp-controller="Home" asp-action="Cart" id="header-cart-btn">
+        <span class="cart_quantity">@cart.Items.Sum(item => item.Quantity)</span>
+        <i class="ti-bag"></i> Cart @cart.Total.ToString("N0") ₫
+    </a>
+    <ul class="cart-list">
+        @foreach (var item in cart.Items)
+        {
+            <li>
+                <div class="cart-item-desc">
+                    <h6>@item.Name</h6>
+                    <p>@item.Quantity × <span class="price">@item.Price.ToString("N0") ₫</span></p>
+                </div>
+            </li>
+        }
+        <li class="total">
+            <span class="pull-right">Total: @cart.Total.ToString("N0") ₫</span>
+            <a asp-controller="Home" asp-action="Cart" class="btn btn-sm btn-cart">View cart</a>
+            <a asp-controller="Home" asp-action="Checkout" class="btn btn-sm btn-checkout">Checkout</a>
+        </li>
+    </ul>
+</div>

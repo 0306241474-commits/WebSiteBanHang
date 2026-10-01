@@ -9,7 +9,7 @@ namespace WebBanHang.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Tên sản phẩm không được để trống")]
-        [StringLength(200)]
+        [StringLength(100)]
         [Display(Name = "Tên sản phẩm")]
         public string Name { get; set; } = string.Empty;
 
@@ -22,6 +22,7 @@ namespace WebBanHang.Models
         public string? Description { get; set; }
 
         [Display(Name = "Hình ảnh")]
+        [StringLength(500)]
         public string? ImageUrl { get; set; }
 
         [Required(ErrorMessage = "Vui lòng chọn danh mục")]

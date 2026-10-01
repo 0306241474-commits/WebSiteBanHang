@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 using WebBanHang.Data;
+using Microsoft.EntityFrameworkCore;
 using WebBanHang.Models;
 
 namespace WebBanHang.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = IdentitySeeder.AdminRole)]
     public class CategoryController : Controller
     {
         private readonly ApplicationDbContext _context;

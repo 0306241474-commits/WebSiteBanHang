@@ -364,3 +364,44 @@ D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\5sbsw4bxlm-{0}-9
 D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\xxku1rdb75-{0}-s9ief6y50r-s9ief6y50r.gz
 D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\6l6oph7rsy-{0}-9fhijiui2v-9fhijiui2v.gz
 D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\nmw1m1paz6-{0}-zyx0pq875w-zyx0pq875w.gz
+D:\ki 5\ASPNet_core\Bai\WebBanHang\bin\Debug\net10.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangValidation\appsettings.Development.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangValidation\appsettings.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangValidation\WebBanHang.staticwebassets.runtime.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangValidation\WebBanHang.staticwebassets.endpoints.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangValidation\WebBanHang.deps.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangValidation\WebBanHang.runtimeconfig.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangValidation\WebBanHang.dll
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangValidation\WebBanHang.pdb
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangNavValidation\appsettings.Development.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangNavValidation\appsettings.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangNavValidation\WebBanHang.staticwebassets.runtime.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangNavValidation\WebBanHang.staticwebassets.endpoints.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangNavValidation\WebBanHang.deps.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangNavValidation\WebBanHang.runtimeconfig.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangNavValidation\WebBanHang.dll
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangNavValidation\WebBanHang.pdb
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangFeaturesValidation\appsettings.Development.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangFeaturesValidation\appsettings.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangFeaturesValidation\WebBanHang.staticwebassets.runtime.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangFeaturesValidation\WebBanHang.staticwebassets.endpoints.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangFeaturesValidation\WebBanHang.deps.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangFeaturesValidation\WebBanHang.runtimeconfig.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangFeaturesValidation\WebBanHang.dll
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangFeaturesValidation\WebBanHang.pdb
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangFeaturesValidation2\appsettings.Development.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangFeaturesValidation2\appsettings.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangFeaturesValidation2\WebBanHang.staticwebassets.runtime.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangFeaturesValidation2\WebBanHang.staticwebassets.endpoints.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangFeaturesValidation2\WebBanHang.deps.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangFeaturesValidation2\WebBanHang.runtimeconfig.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangFeaturesValidation2\WebBanHang.dll
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangFeaturesValidation2\WebBanHang.pdb
+D:\temp\WebBanHangSchemaBuild\appsettings.Development.json
+D:\temp\WebBanHangSchemaBuild\appsettings.json
+D:\temp\WebBanHangSchemaBuild\WebBanHang.staticwebassets.runtime.json
+D:\temp\WebBanHangSchemaBuild\WebBanHang.staticwebassets.endpoints.json
+D:\temp\WebBanHangSchemaBuild\WebBanHang.deps.json
+D:\temp\WebBanHangSchemaBuild\WebBanHang.runtimeconfig.json
+D:\temp\WebBanHangSchemaBuild\WebBanHang.dll
+D:\temp\WebBanHangSchemaBuild\WebBanHang.pdb

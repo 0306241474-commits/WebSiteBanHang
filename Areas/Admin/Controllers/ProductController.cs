@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebBanHang.Data;
@@ -7,6 +8,7 @@ using WebBanHang.Models;
 namespace WebBanHang.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = IdentitySeeder.AdminRole)]
     public class ProductController : Controller
     {
         private readonly ApplicationDbContext _context;
