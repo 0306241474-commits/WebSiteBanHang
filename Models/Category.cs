@@ -7,22 +7,19 @@ namespace WebBanHang.Models
         [Key]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Tên danh mục không được để trống")]
+        [Required(ErrorMessage = "Category name is required.")]
         [StringLength(100)]
-        [Display(Name = "Tên danh mục")]
+        [Display(Name = "Category Name")]
         public string Name { get; set; } = string.Empty;
 
-        // --- Bổ sung các thuộc tính còn thiếu ---
-        [Display(Name = "Thứ tự hiển thị")]
+        [Display(Name = "Display Order")]
         public int DisplayOrder { get; set; } = 0;
 
-        [Display(Name = "Mô tả")]
+        [Display(Name = "Description")]
         public string? Description { get; set; }
 
-        [Display(Name = "Trạng thái")]
+        [Display(Name = "Status")]
         public bool IsActive { get; set; } = true;
-        // ----------------------------------------
-
         public ICollection<Product>? Products { get; set; }
     }
 }

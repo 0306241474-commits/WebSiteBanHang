@@ -34,11 +34,11 @@ public class Order
 
 public static class OrderStatuses
 {
-    public const string Pending = "Chờ xác nhận";
-    public const string Processing = "Đang xử lý";
-    public const string Shipped = "Đang giao";
-    public const string Completed = "Hoàn thành";
-    public const string Cancelled = "Đã hủy";
+    public const string Pending = "Pending";
+    public const string Processing = "Processing";
+    public const string Shipped = "Shipped";
+    public const string Completed = "Completed";
+    public const string Cancelled = "Cancelled";
 
     public static readonly string[] All =
     [

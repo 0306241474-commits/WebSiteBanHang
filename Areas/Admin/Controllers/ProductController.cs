@@ -20,21 +20,21 @@ namespace WebBanHang.Areas.Admin.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
 
-        // 1. READ: Danh sách sản phẩm (kèm tên Danh mục)
+        // 1. READ: List products with their category names.
         public async Task<IActionResult> Index()
         {
             var products = await _context.Products.Include(p => p.Category).ToListAsync();
             return View(products);
         }
 
-        // 2. CREATE: Giao diện thêm mới
+        // 2. CREATE: Display the product creation form.
         public IActionResult Create()
         {
             ViewBag.CategoryId = new SelectList(_context.Categories, "Id", "Name");
             return View();
         }
 
-        // CREATE: Xử lý lưu + Upload ảnh
+        // CREATE: Save the product and upload its image.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Product product, IFormFile? imageFile)
@@ -66,7 +66,7 @@ namespace WebBanHang.Areas.Admin.Controllers
             return View(product);
         }
 
-        // 3. UPDATE: Giao diện sửa
+        // 3. UPDATE: Display the product edit form.
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null) return NotFound();
@@ -78,7 +78,7 @@ namespace WebBanHang.Areas.Admin.Controllers
             return View(product);
         }
 
-        // UPDATE: Xử lý lưu + Thay đổi ảnh
+        // UPDATE: Save product changes and replace its image.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Product product, IFormFile? imageFile)
@@ -91,14 +91,14 @@ namespace WebBanHang.Areas.Admin.Controllers
                 {
                     string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images/products");
 
-                    // Xóa ảnh cũ
+                    // Delete the old image.
                     if (!string.IsNullOrEmpty(product.ImageUrl))
                     {
                         string oldFilePath = Path.Combine(_webHostEnvironment.WebRootPath, product.ImageUrl.TrimStart('/'));
                         if (System.IO.File.Exists(oldFilePath)) System.IO.File.Delete(oldFilePath);
                     }
 
-                    // Lưu ảnh mới
+                    // Save the new image.
                     string uniqueFileName = Guid.NewGuid().ToString() + "_" + imageFile.FileName;
                     string filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
@@ -119,7 +119,7 @@ namespace WebBanHang.Areas.Admin.Controllers
             return View(product);
         }
 
-        // 4. DELETE: Xóa sản phẩm + Xóa ảnh trong thư mục
+        // 4. DELETE: Delete the product and its image file.
         public async Task<IActionResult> Delete(int id)
         {
             var product = await _context.Products.FindAsync(id);

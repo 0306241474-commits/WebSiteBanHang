@@ -17,7 +17,7 @@ public static class IdentitySeeder
         if (!await roleManager.RoleExistsAsync(AdminRole))
         {
             var roleResult = await roleManager.CreateAsync(new IdentityRole(AdminRole));
-            EnsureSucceeded(roleResult, "Tạo vai trò Admin thất bại.");
+            EnsureSucceeded(roleResult, "Failed to create the Admin role.");
         }
 
         var username = configuration["AdminBootstrap:Username"];
@@ -25,7 +25,7 @@ public static class IdentitySeeder
         if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
         {
             logger.LogWarning(
-                "Chưa tạo tài khoản Admin. Hãy cấu hình AdminBootstrap:Username và AdminBootstrap:Password bằng User Secrets hoặc biến môi trường.");
+                "The Admin account was not created. Configure AdminBootstrap:Username and AdminBootstrap:Password using User Secrets or environment variables.");
             return;
         }
 
@@ -34,13 +34,13 @@ public static class IdentitySeeder
         {
             admin = new IdentityUser { UserName = username, Email = username };
             var userResult = await userManager.CreateAsync(admin, password);
-            EnsureSucceeded(userResult, "Tạo tài khoản Admin thất bại.");
+            EnsureSucceeded(userResult, "Failed to create the Admin account.");
         }
 
         if (!await userManager.IsInRoleAsync(admin, AdminRole))
         {
             var roleResult = await userManager.AddToRoleAsync(admin, AdminRole);
-            EnsureSucceeded(roleResult, "Gán vai trò Admin thất bại.");
+            EnsureSucceeded(roleResult, "Failed to assign the Admin role.");
         }
     }
 

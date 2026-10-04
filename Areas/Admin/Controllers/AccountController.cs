@@ -29,7 +29,7 @@ public class AccountController : Controller
         ViewData["ReturnUrl"] = returnUrl;
         if (string.IsNullOrWhiteSpace(username) || string.IsNullOrEmpty(password))
         {
-            ModelState.AddModelError(string.Empty, "Vui lòng nhập tên đăng nhập và mật khẩu.");
+            ModelState.AddModelError(string.Empty, "Please enter your username and password.");
             return View();
         }
 
@@ -55,7 +55,7 @@ public class AccountController : Controller
             await _signInManager.SignOutAsync();
         }
 
-        ModelState.AddModelError(string.Empty, "Tên đăng nhập hoặc mật khẩu không đúng, hoặc tài khoản chưa được cấp quyền Admin.");
+        ModelState.AddModelError(string.Empty, "The username or password is incorrect, or this account does not have admin access.");
         return View();
     }
 

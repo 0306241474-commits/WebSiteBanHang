@@ -405,3 +405,5 @@ D:\temp\WebBanHangSchemaBuild\WebBanHang.deps.json
 D:\temp\WebBanHangSchemaBuild\WebBanHang.runtimeconfig.json
 D:\temp\WebBanHangSchemaBuild\WebBanHang.dll
 D:\temp\WebBanHangSchemaBuild\WebBanHang.pdb
+D:\ki 5\ASPNet_core\Bai\WebBanHang\bin\Debug\net10.0\package-lock.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHangValidation\package-lock.json

@@ -1,30 +1,30 @@
 @model WebBanHang.Models.Category
 
 @{
-    ViewData["Title"] = "Chỉnh sửa danh mục";
+    ViewData["Title"] = "Edit Category";
 }
 
 <div id="page-wrapper">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Quản lý Danh mục</h1>
+                <h1 class="page-header">Categories</h1>
             </div>
         </div>
 
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Chỉnh sửa danh mục</div>
+                    <div class="panel-heading">Edit Category</div>
                     <div class="panel-body">
                         <form asp-area="Admin" asp-controller="Category" asp-action="Edit" method="post">
                             <input type="hidden" asp-for="Id" />
                             <div class="form-group">
-                                <label>Tên danh mục</label>
+                                <label>Category Name</label>
                                 <input asp-for="Name" class="form-control" required />
                             </div>
-                            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Cập nhật</button>
-                            <a href="/Admin/Category" class="btn btn-default">Hủy bỏ</a>
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Update</button>
+                            <a href="/Admin/Category" class="btn btn-default">Cancel</a>
                         </form>
                     </div>
                 </div>

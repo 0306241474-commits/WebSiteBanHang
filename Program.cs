@@ -73,6 +73,10 @@ app.MapControllerRoute(
 
 await using (var scope = app.Services.CreateAsyncScope())
 {
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    await dbContext.Database.MigrateAsync();
+    await StoreDataSeeder.SeedCatalogAsync(dbContext);
+
     await IdentitySeeder.SeedAdminAsync(
         scope.ServiceProvider,
         app.Configuration,

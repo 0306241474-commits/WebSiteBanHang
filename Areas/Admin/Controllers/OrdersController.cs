@@ -42,7 +42,7 @@ public class OrdersController : Controller
     {
         if (!OrderStatuses.All.Contains(status))
         {
-            return BadRequest("Trạng thái đơn hàng không hợp lệ.");
+            return BadRequest("Invalid order status.");
         }
 
         var order = await _context.Orders.FindAsync(id);

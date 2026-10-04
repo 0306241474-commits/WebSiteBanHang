@@ -1,4 +1,4 @@
-<header class="header_area bg-img background-overlay-white" style="background-image: url(img/bg-img/bg-1.jpg);">
+<header class="header_area bg-img background-overlay-white" style="background-image: url('@Url.Content("~/img/bg-img/bg-1.jpg")');">
             <!-- Top Header Area Start -->
             <div class="top_header_area">
                 <div class="container h-100">
@@ -56,9 +56,9 @@
                                                     <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Checkout">Checkout</a>
                                                 </div>
                                             </li>
-                                            <li class="nav-item"><a class="nav-link" href="#">Dresses</a></li>
-                                            <li class="nav-item"><a class="nav-link" href="#"><span class="karl-level">hot</span> Shoes</a></li>
-                                            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                                            <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Shop">Dresses</a></li>
+                                            <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Shop"><span class="karl-level">hot</span> Shoes</a></li>
+                                            <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Shop">Contact</a></li>
                                         </ul>
                                     </div>
                                 </nav>

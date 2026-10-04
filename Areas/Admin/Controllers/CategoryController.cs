@@ -17,17 +17,17 @@ namespace WebBanHang.Areas.Admin.Controllers
             _context = context;
         }
 
-        // 1. READ: Hiển thị danh sách
+        // 1. READ: Display the category list.
         public async Task<IActionResult> Index()
         {
             var categories = await _context.Categories.ToListAsync();
             return View(categories);
         }
 
-        // 2. CREATE: Giao diện thêm mới
+        // 2. CREATE: Display the category creation form.
         public IActionResult Create() => View();
 
-        // CREATE: Xử lý lưu
+        // CREATE: Save the new category.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Category category)
@@ -41,7 +41,7 @@ namespace WebBanHang.Areas.Admin.Controllers
             return View(category);
         }
 
-        // 3. UPDATE: Giao diện cập nhật
+        // 3. UPDATE: Display the category edit form.
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null) return NotFound();
@@ -50,7 +50,7 @@ namespace WebBanHang.Areas.Admin.Controllers
             return View(category);
         }
 
-        // UPDATE: Xử lý lưu
+        // UPDATE: Save category changes.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Category category)
@@ -66,7 +66,7 @@ namespace WebBanHang.Areas.Admin.Controllers
             return View(category);
         }
 
-        // 4. DELETE: Xử lý xóa
+        // 4. DELETE: Delete the category.
         public async Task<IActionResult> Delete(int id)
         {
             var category = await _context.Categories.FindAsync(id);
