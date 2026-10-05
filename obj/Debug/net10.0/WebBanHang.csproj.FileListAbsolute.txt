@@ -286,19 +286,16 @@ D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\8s2e6uvfmf-{0}-8
 D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\276beeejay-{0}-y1ljkmu5z9-y1ljkmu5z9.gz
 D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\2sehlmqaph-{0}-8mvsbwg5f2-8mvsbwg5f2.gz
 D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\6eqk3sj5p8-{0}-8jtd6mqy9n-8jtd6mqy9n.gz
-D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\sxmceqj8u6-{0}-hp4ehfq5ye-hp4ehfq5ye.gz
 D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\xb4loe0bio-{0}-rf9f4pws8w-rf9f4pws8w.gz
 D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\6qasorzgov-{0}-hucl17ytxx-hucl17ytxx.gz
 D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\j9v4xw8kdc-{0}-92pu96zsuz-92pu96zsuz.gz
 D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\5mviwuastj-{0}-6o3upp2xiy-6o3upp2xiy.gz
 D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\iqkovdn6lc-{0}-7jn05mlqzz-7jn05mlqzz.gz
-D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\3ylbhhcxii-{0}-w9zozh3732-w9zozh3732.gz
 D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\52pxsjrojs-{0}-snezv7zscm-snezv7zscm.gz
 D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\om9huxlzr5-{0}-dosqy3kf6t-dosqy3kf6t.gz
 D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\ubzem8wtfp-{0}-sgabxu717i-sgabxu717i.gz
 D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\gcdumuhf7s-{0}-fm5yj345o5-fm5yj345o5.gz
 D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\ppmscrtp2e-{0}-a4j517ijue-a4j517ijue.gz
-D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\qem4motuhg-{0}-o4fzwh0add-o4fzwh0add.gz
 D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\s32ey7dxgc-{0}-kcy5bpnlh4-kcy5bpnlh4.gz
 D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\0krjtzwh4f-{0}-r0izaq9iwr-r0izaq9iwr.gz
 D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\r23vwsvoof-{0}-jq88ik54z8-jq88ik54z8.gz
@@ -407,3 +404,15 @@ D:\temp\WebBanHangSchemaBuild\WebBanHang.dll
 D:\temp\WebBanHangSchemaBuild\WebBanHang.pdb
 D:\ki 5\ASPNet_core\Bai\WebBanHang\bin\Debug\net10.0\package-lock.json
 C:\Users\PHUC\AppData\Local\Temp\WebBanHangValidation\package-lock.json
+D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\sxmceqj8u6-{0}-aqm0o98phw-aqm0o98phw.gz
+D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\3ylbhhcxii-{0}-xgrssxi8ug-xgrssxi8ug.gz
+D:\ki 5\ASPNet_core\Bai\WebBanHang\obj\Debug\net10.0\compressed\qem4motuhg-{0}-l41irgar15-l41irgar15.gz
+C:\Users\PHUC\AppData\Local\Temp\WebBanHang-build\appsettings.Development.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHang-build\appsettings.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHang-build\package-lock.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHang-build\WebBanHang.staticwebassets.runtime.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHang-build\WebBanHang.staticwebassets.endpoints.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHang-build\WebBanHang.deps.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHang-build\WebBanHang.runtimeconfig.json
+C:\Users\PHUC\AppData\Local\Temp\WebBanHang-build\WebBanHang.dll
+C:\Users\PHUC\AppData\Local\Temp\WebBanHang-build\WebBanHang.pdb

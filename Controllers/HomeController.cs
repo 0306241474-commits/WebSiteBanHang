@@ -118,6 +118,7 @@ public class HomeController : Controller
         return View(new CheckoutViewModel { Cart = cart });
     }
 
+    [HttpPost("/Home/Checkout")]
     [HttpPost("/Checkout")]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Checkout(CheckoutViewModel model)

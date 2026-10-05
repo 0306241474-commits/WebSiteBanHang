@@ -4,11 +4,11 @@
 }
 
 <div class="cart">
-    <a asp-controller="Home" asp-action="Cart" id="header-cart-btn">
+    <button type="button" id="header-cart-btn" aria-expanded="false" aria-controls="header-cart-list">
         <span class="cart_quantity">@cart.Items.Sum(item => item.Quantity)</span>
         <i class="ti-bag"></i> Cart @cart.Total.ToString("N0") ₫
-    </a>
-    <ul class="cart-list">
+    </button>
+    <ul class="cart-list" id="header-cart-list">
         @foreach (var item in cart.Items)
         {
             <li>

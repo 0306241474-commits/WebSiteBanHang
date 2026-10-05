@@ -381,7 +381,8 @@ img {
     z-index: 1000;
 }
 
-.cart > a {
+.cart > a,
+.cart > button {
     color: #2e2e2e;
     font-size: 14px;
     line-height: 1;
@@ -390,7 +391,15 @@ img {
     font-weight: 600;
 }
 
-.cart > a > i {
+.cart > button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+}
+
+.cart > a > i,
+.cart > button > i {
     font-size: 20px;
     padding-right: 5px;
 }

@@ -137,7 +137,8 @@
 
     // :: 7.0 Header Cart btn Active Code
     $('#header-cart-btn').on('click', function () {
-        $('body').toggleClass('cart-data-open');
+        var isOpen = $('body').toggleClass('cart-data-open').hasClass('cart-data-open');
+        $(this).attr('aria-expanded', isOpen);
     })
 
     // :: 8.0 Side Menu Active Code

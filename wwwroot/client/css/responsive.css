@@ -41,7 +41,8 @@
     .top_logo a img {
         max-width: 80px;
     }
-    .cart > a {
+    .cart > a,
+    .cart > button {
         font-size: 12px;
     }
     .header-right-side-menu > a {
